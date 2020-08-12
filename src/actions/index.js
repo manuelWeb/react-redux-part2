@@ -1,4 +1,5 @@
 export const USER_SELECTED = 'USER_SELECTED'
+export const DEV_SELECTED = 'DEV_SELECTED'
 
 // action creator qui…
 export function selectUser(user) {
@@ -8,4 +9,12 @@ export function selectUser(user) {
     type: USER_SELECTED,
     payload: user
   }
+}
+
+export function devUser(dev) {
+  return {
+    type: DEV_SELECTED,
+    payload: dev
+  }
+
 }

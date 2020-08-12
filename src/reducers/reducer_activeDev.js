@@ -1,9 +1,9 @@
-import { USER_SELECTED } from "../actions";
+import { DEV_SELECTED } from "../actions";
 
 export default function (state = null, action) {
-  // console.log(`state init: `, state);
+  console.log(`state-dev init: `, state);
   switch (action.type) {
-    case USER_SELECTED:
+    case DEV_SELECTED:
       return action.payload
     default: return state
   }
