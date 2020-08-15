@@ -3,7 +3,7 @@ export const DEV_SELECTED = 'DEV_SELECTED'
 
 // action creator qui…
 export function selectUser(user) {
-  // console.log(`selected: ${user.name}`);
+  // console.log(`user: ${user.name}`);
   // …retourne une action
   return {
     type: USER_SELECTED,
@@ -12,9 +12,9 @@ export function selectUser(user) {
 }
 
 export function devUser(dev) {
+  // console.log(`dev ${dev.name}`);
   return {
     type: DEV_SELECTED,
     payload: dev
   }
-
 }

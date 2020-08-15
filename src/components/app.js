@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import '../style/style.scss'
 
 import UserList from '../containers/UserList'
-import UserDetail from '../containers/UserDetail';
 import DevList from '../containers/DevList';
+import UserDetail from '../containers/UserDetail';
 
 class App extends Component {
   render() {

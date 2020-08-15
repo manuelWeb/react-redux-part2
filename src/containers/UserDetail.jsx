@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 
 class UserDetail extends Component {
   render() {
-    const { myActiveUser } = this.props
+    const { myActiveUser, myActiveDev } = this.props
     if (!myActiveUser) {
-      return <div className="col-sm">Selectionne un user pour démarrer</div>
+      return <div className="col-sm">Selectionne un user ou un dev pour démarrer</div>
     }
     return (
       <div className="col-sm">
@@ -15,6 +15,16 @@ class UserDetail extends Component {
           <li>Role: {myActiveUser.role}</li>
           <li>Actif: {myActiveUser.active}</li>
         </ul>
+        {myActiveDev && (
+          <>
+            <h3>Dev: {myActiveDev && myActiveDev.name}</h3>
+            <ul>
+              <li>Id: {myActiveDev.id}</li>
+              <li>Language: {myActiveDev.lang.join(', ')}.</li>
+              <li>Library: {myActiveDev.lib}</li>
+            </ul>
+          </>
+        )}
 
       </div>
     );
@@ -23,7 +33,8 @@ class UserDetail extends Component {
 
 function mapStateToProps(state) {
   return {
-    myActiveUser: state.activeUser
+    myActiveUser: state.activeUser,
+    myActiveDev: state.activeDev
   }
 }
 
